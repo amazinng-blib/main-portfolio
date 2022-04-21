@@ -1,13 +1,372 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
+
+:root {
+  --cl-primary-1: rgba(75, 75, 75, 0.99);
+  --cl-primary-2: rgba(230, 230, 198, 0.77);
+  --cl-primary-3: rgba(31, 59, 214, 0.4);
+  --black: rgba(14, 8, 8, 0.897);
+  --clr-grey-4: hsl(209, 28%, 39%);
+  --clr-grey-8: hsl(210, 31%, 80%);
+  --cl-primary-10: hsl(205, 90%, 88%);
+  --cl-grey-1: hsl(209, 61%, 16%);
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --clr-gold: #c59d5f;
+  --cl-white: #fff;
+  --fixed-width: 630px;
+  --max-width: 1170px;
+  --transition: all linear 0.4s;
+  --letter-spacing: 0.1rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  font-size: 0.875rem;
+  background-color: rgba(0, 0, 0, 0.651);
+  color: var(--cl-white);
+  transition: all 0.4s ease-in-out;
+}
+
+/* nav */
+
+nav {
+  background-color: var(--cl-primary-2);
+  box-shadow: var(--dark-shadow);
+}
+
+.nav-container {
+  width: 100%;
+  max-width: var(--max-width);
+  font-size: 1rem;
+  text-transform: capitalize;
+  transition: var(--transition);
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.nav-container h3 {
+  padding-left: 0.5rem;
+  color: goldenrod;
+}
+
+.link {
+  text-decoration: none;
+  font-family: "Ms Madi", cursive;
+  letter-spacing: var(--letter-spacing);
+  font-size: 1.7rem;
+}
+.nav-container ul {
+  width: 80vw;
+  margin: 0 auto;
+  max-width: var(--fixed-width);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  list-style: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  box-shadow: 0 5px var(--cl-white);
+  color: var(--clr-gold);
+  /* padding: 0.5rem 1rem; */
+  transform: var(--transition);
+}
+/* home */
+
+.home-container {
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.heading {
+  font-size: 1.15rem;
+  margin: 2rem auto;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.span {
+  color: var(--clr-gold);
+  margin-left: 0.4rem;
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--clr-gold);
+}
+
+/* image */
+.img-container {
+  width: 15rem;
+  height: 15rem;
+  margin: 0 auto;
+}
+
+.img-container img {
+  width: 100%;
+  object-fit: cover;
+  clip-path: circle();
+}
+
+/* name and job div */
+
+.name-job {
+  margin-top: 1rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.name-job h4 {
+  letter-spacing: var(--letter-spacing);
+  line-height: 2;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.blink {
+  font-weight: 600;
+  letter-spacing: var(--letter-spacing);
+  border-right: 2px solid var(--cl-white);
+  width: 9.8rem;
+  text-align: center;
+  margin: 0 auto;
+  transition: var(--transition);
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--clr-gold);
+}
+
+.text {
+  animation: text 4s steps(30) 1s normal both,
+    blinkText 500ms steps(30) infinite normal;
+}
+
+@keyframes text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 9.8rem;
+  }
+}
+
+@keyframes blinkText {
+  from {
+    border-right-color: var(--cl-white);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+
+/* skills */
+
+.skills-container {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--letter-spacing);
+  margin: 2rem auto;
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 2px;
+  background-color: var(--clr-gold);
+  margin: 0 auto;
+}
+
+table {
+  margin: 1rem auto;
+  width: 90vw;
+  max-width: var(--fixed-width);
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+table td {
+  border-bottom: 1px solid var(--clr-gold);
+  padding: 1rem;
+}
+
+.projects {
+  margin-top: 4rem;
+}
+
+.projects-section {
+  width: 90vw;
+  max-width: var(--max-width);
+}
+
+.projects-container {
+  width: 100%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.projects-container img {
+  width: 90%;
+  height: 25rem;
+  object-fit: cover;
+  padding: 1rem;
+}
+
+.btn {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.projects-name {
+  text-transform: capitalize;
+  font-family: "Ms Madi", cursive;
+  font-size: 1.5rem;
+  color: var(--clr-gold);
+  letter-spacing: 2px;
+}
+
+/*footer */
+
+footer {
+  background-color: rgba(41, 37, 32, 0.425);
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  place-items: center;
+  padding: 0.8rem;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 0;
+}
+
+.footer-main-div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  height: 3rem;
+  z-index: 1;
+  margin-top: 0;
+}
+
+.link-div {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  border-right: 1px solid white;
+  padding-right: 2rem;
+}
+
+.link-div svg {
+  font-size: 1.3rem;
+  color: var(--cl-white);
+}
+.link-div svg:hover {
+  color: var(--clr-gold);
+}
+
+.copywrite {
+  letter-spacing: var(--letter-spacing);
+}
+
+/* about */
+.about-main {
+  width: 80vw;
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+  font-size: 1rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.about-main h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.school-div {
+  margin-top: 1rem;
+}
+
+.school-div-p {
+  color: rgb(57, 185, 100);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+/* contact */
+
+.contact {
+  width: 80vw;
+  max-width: var(--fixed-width);
+  margin: 0 auto;
+  font-size: 1rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+.contact-div {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.contact-icon {
+  font-size: 4rem;
+  height: 5rem;
+  margin: 0.5rem auto;
+}
+
+.contact-icon svg {
+  color: rgb(224, 195, 31);
+  height: 100%;
+}
+
+@media screen and (min-width: 560px) {
+  .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* width: 90%;
+    height: 25rem; */
+  }
 }
