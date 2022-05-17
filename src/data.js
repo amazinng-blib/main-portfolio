@@ -29,4 +29,12 @@ export const projects = [
     src: "https://github.com/amazinng-blib/cocktail",
     img: "projects/cocktail.jpg",
   },
+
+  {
+    id: 5,
+    site: "https://shopline-delta.vercel.app/?",
+    name: "shopline landing page",
+    source: "https://github.com/amazinng-blib/shopline",
+    img: "projects/shopline-delta-vercel-app-.jpg",
+  },
 ];

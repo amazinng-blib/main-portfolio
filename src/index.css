@@ -44,7 +44,6 @@ nav {
 
 .nav-container {
   width: 100%;
-  max-width: var(--max-width);
   font-size: 1rem;
   text-transform: capitalize;
   transition: var(--transition);
@@ -68,7 +67,7 @@ nav {
   font-size: 1.7rem;
 }
 .nav-container ul {
-  width: 80vw;
+  width: 100%;
   margin: 0 auto;
   max-width: var(--fixed-width);
   display: flex;
@@ -83,6 +82,7 @@ nav {
 
 .nav-link {
   text-decoration: none;
+  margin-left: 0.5rem;
 }
 
 .nav-link:hover {
@@ -285,13 +285,14 @@ footer {
   height: 3rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   border-right: 1px solid white;
-  padding-right: 2rem;
 }
 
 .link-div svg {
   font-size: 1.3rem;
   color: var(--cl-white);
+  margin-right: 1.5rem;
 }
 .link-div svg:hover {
   color: var(--clr-gold);
