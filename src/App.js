@@ -13,7 +13,7 @@ const App = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>NwankwoErnest.com</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <link rel="canonical" href="https://main-portfolio-amber.vercel.app/" />
         <meta name="description" content="my portfolio" />
       </Helmet>
       <BrowserRouter>
