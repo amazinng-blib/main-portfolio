@@ -286,16 +286,15 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid white;
 }
 
 .link-div svg {
   font-size: 1.3rem;
   color: var(--cl-white);
-  margin-right: 1.5rem;
+  fill: burlywood;
 }
 .link-div svg:hover {
-  color: var(--clr-gold);
+  fill: #fff;
 }
 
 .copywrite {
