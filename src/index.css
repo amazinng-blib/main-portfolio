@@ -292,6 +292,7 @@ footer {
   font-size: 1.3rem;
   color: var(--cl-white);
   fill: burlywood;
+  margin-right: 1rem;
 }
 .link-div svg:hover {
   fill: #fff;
